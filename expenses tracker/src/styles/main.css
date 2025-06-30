@@ -364,3 +364,13 @@ p strong {
   }
 }
 
+.home-link h1 {
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.home-link h1:hover {
+  color:#e63946;
+}

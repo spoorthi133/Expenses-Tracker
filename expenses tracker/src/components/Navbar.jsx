@@ -4,7 +4,10 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     <nav className="navbar">
-      <h2>💸 Expenses Tracker</h2>
+
+         <Link to="/" className="home-link">
+  <h1> 💸 Expenses Tracker</h1>
+</Link>
       
   
     <ul>

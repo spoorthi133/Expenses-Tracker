@@ -1,14 +1,17 @@
-import { useContext } from 'react';
-import { ExpenseContext } from '../context/ExpenseContext';
-
 function ExpenseItem({ expense }) {
-  const { deleteExpense } = useContext(ExpenseContext);
+  const { title, amount, category, month } = expense;
 
   return (
     <div className="expense-item">
-      <span>{expense.title}</span>
-      <span>₹{expense.amount}</span>
-      <button onClick={() => deleteExpense(expense.id)}>Delete</button>
+      <div className="expense-left">
+        <h3>{title}</h3>
+        <p>₹{amount}</p>
+      </div>
+
+      <div className="expense-right">
+        <span>📅 {month.charAt(0).toUpperCase() + month.slice(1)}</span>
+        <span>🏷️ {category}</span>
+      </div>
     </div>
   );
 }
